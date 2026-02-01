@@ -19,6 +19,6 @@ const Api = () => {
       <Table data={User_data}/>
     </div>
   );
-}
+}                                                                          
 
 export default Api;

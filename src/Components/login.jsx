@@ -7,6 +7,7 @@ import auth from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { signInWithPopup,GoogleAuthProvider, GithubAuthProvider } from "firebase/auth";
+import ToastSucess from "./ToastSucess";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -14,9 +15,16 @@ const Login = () => {
 
   const Login = () => {
     try {
-      signInWithEmailAndPassword(auth, email, password).then((res) =>
-        console.log(res).catch((error) => console.log(error)),
-      );
+      signInWithEmailAndPassword(auth, email, password)
+      .then((res) =>
+      {
+        console.log(res)
+      }      
+      )
+    .catch(() => {
+
+      })
+      ;
     } catch (error) {
       console.log(error);
     }
